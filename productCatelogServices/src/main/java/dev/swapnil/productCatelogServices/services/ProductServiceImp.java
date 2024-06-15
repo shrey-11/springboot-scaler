@@ -64,12 +64,6 @@ public class ProductServiceImp implements ProductServices{
      * here the below method is receiving a FakeStoreProductDto object from 3rd part API
      * we convert the FakeStoreProductDto object to object of our model and returning it
      * */
-    //    COPY
-    /*
-     * while calling a 3rd party API, a service should always receive a DTO object of a specific DTO class build for that specific endpoint
-     * here the below method is receiving a FakeStoreProductDto object from 3rd part API
-     * we convert the FakeStoreProductDto object to object of our model and returning it
-     * */
     public List<Products> getAllProducts() {
         RestTemplate restTemplate= restTemplateBuilder.build();
         ResponseEntity<FakeStoreProductDto[]> list= restTemplate.getForEntity(
